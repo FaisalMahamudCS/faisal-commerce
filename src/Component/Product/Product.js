@@ -14,13 +14,9 @@ const Product = ({products}) => {
         <figure><img src={image} alt="Shoes" /></figure>
         <div class="card-body">
           <h2 class="card-title">{title}</h2>
-          <p>Description: {description}</p>
-        
-      
-          <p>Price:{price}$</p>
-      
-          <div class="card-actions justify-center">
-            <button class="btn btn-primary" onClick={()=>productdetails(id)}>Buy Now</button>
+       <p>Price:{price}$</p>
+      <div class="card-actions justify-center">
+            <button class="btn " onClick={()=>productdetails(id)}>Buy Now</button>
           </div>
         </div>
       </div> 
