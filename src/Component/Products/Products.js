@@ -1,6 +1,8 @@
 import React from 'react';
 import  { useEffect, useState } from 'react';
 import Product from '../Product/Product';
+import { Row } from 'react-bootstrap';
+import './Products.css'
 const Products = () => {
     const [products,setProducts]=useState([]);
     useEffect(()=>{
@@ -15,11 +17,11 @@ const Products = () => {
               <h2 className='text-center'>Top Products</h2>
             <div className='container mx-auto'>
             
-            <div className='grid lg:grid-cols-3  grid-cols-1 gap-3'>
+            <Row xs={1} md={3} className="gy-4">
                 {
                     products.map(products=><Product products={products} ></Product>)
                 }
-            </div>
+          </Row>
             </div>  
         </div>
     );

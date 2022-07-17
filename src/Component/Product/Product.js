@@ -1,5 +1,9 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
+import { Rating } from 'react-simple-star-rating'
+import ReactStars from 'react-stars'
+import { Card, Col, Row } from 'react-bootstrap';
+import '../Products/Products.css'
 const Product = ({products}) => {
 
    const {category,description,id,image,price,rating,title}=products;
@@ -10,16 +14,24 @@ const Product = ({products}) => {
     
     } 
     return (
-        <div class="card w-96 bg-base-100 shadow-xl">
-        <figure><img src={image} alt="Shoes" /></figure>
-        <div class="card-body">
-          <h2 class="card-title">{title}</h2>
-       <p>Price:{price}$</p>
-      <div class="card-actions justify-center">
-            <button class="btn " onClick={()=>productdetails(id)}>Buy Now</button>
+      <Col>
+        <div class=" h-100 product text-center w-96 bg-base-100 shadow-xl">
+        <div className='thumbnail'>
+        <img src={image} className='thumbnail' alt="Shoes" />
+        </div>
+        <div class="card-body  d-flex justify-content-between  flex-column">
+          <h5 class="card-title">{title}</h5>
+       <div className=''>
+       <p className=''>Price:{price}$</p>
+       </div>
+      <div class="card-actions mt-auto">
+       
+            <button class="btn btn-dark  " onClick={()=>productdetails(id)}>Buy Now</button>
+            
           </div>
         </div>
       </div> 
+      </Col>
     );
 };
 
