@@ -15,7 +15,7 @@ const Product = ({products}) => {
     } 
     return (
       <Col>
-        <div class=" h-100 product text-center w-96 bg-base-100 shadow-xl">
+        <div class=" h-100 product text-center shadow-xl">
         <div className='thumbnail'>
         <img src={image} className='thumbnail' alt="Shoes" />
         </div>
@@ -24,7 +24,7 @@ const Product = ({products}) => {
        <div className=''>
        <p className=''>Price:{price}$</p>
        </div>
-      <div class="card-actions mt-auto">
+      <div class=" mt-auto">
        
             <button class="btn btn-dark  " onClick={()=>productdetails(id)}>Buy Now</button>
             

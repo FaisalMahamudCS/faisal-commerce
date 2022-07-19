@@ -4,6 +4,7 @@ import {useParams} from 'react-router-dom';
 
 const ProductDetails = () => {
     const { id } = useParams();
+    //detail
 const [productDetails,setProductDetails]=useState([]);
     useEffect(()=>{
         fetch(`https://fakestoreapi.com/products/${id}`)
@@ -18,15 +19,15 @@ const [productDetails,setProductDetails]=useState([]);
 
     return (
         <div>
-            <div className=''>
-        <div className='container mx-auto w-4/5'>
+            <div className='mt-5'>
+        <div className='container mx-auto mt-5 product '>
             <div class="row">
             <div className="col-lg-6 col-12  d-flex align-items-center flex-column" >
             <figure><img className='detail ' src={image} alt="Movie"/></figure>
             </div>
             <div  className="col-lg-6 col-12" >
-              <div class="card-body">
-              <h3 class="card-title">{title}</h3>
+              <div class="card-body m-3">
+              <h3 class="card-title ">{title}</h3>
               <h5 class="card-title"> {category}</h5>
 
     <p>{description}</p>

@@ -14,7 +14,7 @@ const Products = () => {
     console.log(products)
     return (
         <div>
-              <h2 className='text-center'>Top Products</h2>
+              <h2 className='text-center m-3'>Top Products</h2>
             <div className='container mx-auto'>
             
             <Row xs={1} md={3} className="gy-4">
